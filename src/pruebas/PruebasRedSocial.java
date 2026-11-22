@@ -10,8 +10,8 @@ public class PruebasRedSocial {
     private static void verificar(String nombre, Object esperado, Object obtenido) {
         boolean pasa = (esperado == null) ? obtenido == null : esperado.equals(obtenido);
         if (pasa) ok++; else fallos++;
-        System.out.printf("[%s] %-48s esperado=%s obtenido=%s%n",
-                pasa ? "OK  " : "FALLA", nombre, esperado, obtenido);
+        System.out.printf("[%s] %-34s esp=%s | obt=%s%n",
+                pasa ? "OK" : "FALLA", nombre, esperado, obtenido);
     }
 
     private static RedSocial redInicial() {
